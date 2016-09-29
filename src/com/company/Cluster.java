@@ -11,6 +11,7 @@ import java.util.List;
  */
 public class Cluster {
 
+    // TODO: Add consistent hashing
     public static void main(String[] args) throws IOException, InterruptedException {
 
         List<NodeInfo> nodes = NodesList.readNodesList();

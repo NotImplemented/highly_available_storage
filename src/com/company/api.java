@@ -48,6 +48,7 @@ public class api {
 
     }
 
+    // TODO: wait asynchronously
     private static Query waitForResponse(Query q) {
 
         System.out.println("Waiting for response for query: " + q);
@@ -64,7 +65,7 @@ public class api {
                     Gson gson = new GsonBuilder().create();
                     Query query = gson.fromJson(reader, Query.class);
 
-                    System.out.println("Received response for query with id = " + q.getId() + ": " + query);
+                    System.out.println("Received response: " + query);
 
                     if (query.getResponseQueryId() == q.getId()) {
 
